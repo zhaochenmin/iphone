@@ -1,0 +1,114 @@
+h1,h2,h3,h4,h5,h6,dl,dt,dd,p,ul,li,i{
+  padding:0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  position: relative;
+  font-size:12px;
+}
+img{
+  border:none;
+}
+a{
+  text-decoration:none;
+}
+body{
+  height: auto;
+  font-family: Arial,"微软雅黑";
+  font-weight: 100;
+}
+//左右居中
+@mixin zuoyou{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+}
+//上下居中
+@mixin shangxia{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+//上下左右居中
+@mixin center{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+//不知道是啥
+@mixin  gaizi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+//规定圆:在引用时：@include yuan(50px)
+@mixin yuan ($size){
+  height: $size;
+  width: $size;
+  border-radius: 50%;
+}
+//规定长方形的宏：在引用时：@include changfang(20px,10px)
+@mixin changfang($w,$h){
+  width: $w;
+  height: $h;
+}
+//规定正方形
+@mixin zhengfang($size){
+  width:$size;
+  height:$size;
+}
+//清除浮动加这个类
+%clear{
+  content:"";
+  display:block;
+  clear:both;
+  line-height:0;
+  height:0;
+}
+.clearfix::after{
+  @extend %clear;
+}
+//规定屏幕大小
+$num:12;//规定是12栅格的百分比
+$l-size:1370px;
+$m-size:968px;
+$s-size:824px;
+$f-size:750px;
+@mixin onl{
+  @media screen and (max-width:$l-size){
+    @content;
+  }
+}
+@mixin onm{
+  @media screen and(max-width:$m-size){
+    @content;
+  }
+}
+
+@mixin ons{
+  @media screen and(max-width:$s-size){
+    @content;
+  }
+}
+@mixin onf{
+  @media screen and(max-width:$f-size){
+    @content;
+  }
+}
+//栅格系统
+//.row{
+//  &::after{
+//    @extend %clear;
+//  }
+//}
+//.col{
+//  float:left;
+//}
+//规定col在小屏幕时的width百分比大小

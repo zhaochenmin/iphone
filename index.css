@@ -1,0 +1,942 @@
+@charset "UTF-8";
+h1, h2, h3, h4, h5, h6, dl, dt, dd, p, ul, li, i {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  position: relative;
+  font-size: 12px; }
+
+img {
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  height: auto;
+  font-family: Arial,"微软雅黑";
+  font-weight: 100; }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  line-height: 0;
+  height: 0; }
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+.first {
+  display: block;
+  width: 1366px;
+  height: 40px;
+  background: #444;
+  margin: 0 auto; }
+  .first.searching {
+    display: none; }
+  .first .fi1 {
+    width: 976px;
+    margin: 0 auto;
+    text-align: right;
+    color: #a8a8aa;
+    font-size: 12px;
+    font-family: "HanHei SC", PingHei, "PingFang SC","Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 40px; }
+
+.second {
+  text-align: justify;
+  z-index: 5;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%; }
+  @media screen and (max-width: 1370px) {
+    .second .xiangyingshi {
+      position: relative;
+      display: none;
+      height: 48px; }
+      .second .xiangyingshi .head {
+        height: 48px;
+        max-width: 768px;
+        margin: 0 auto;
+        text-align: justify;
+        position: relative; }
+        .second .xiangyingshi .head::after {
+          content: "";
+          width: 100%;
+          display: inline-block;
+          height: 0;
+          font-size: 0;
+          line-height: 0; }
+        .second .xiangyingshi .head .head1 {
+          width: 48px;
+          display: inline-block;
+          position: relative; }
+          .second .xiangyingshi .head .head1 .big {
+            width: 100%;
+            height: 48px;
+            display: block;
+            cursor: pointer;
+            transition: opacity .5s ease;
+            opacity: 1; }
+            .second .xiangyingshi .head .head1 .big:hover {
+              opacity: 0.5; }
+            .second .xiangyingshi .head .head1 .big span {
+              width: 17px;
+              height: 1px;
+              display: block;
+              background: #fff;
+              position: absolute;
+              left: 16px; }
+            .second .xiangyingshi .head .head1 .big .up {
+              top: 20px; }
+            .second .xiangyingshi .head .head1 .big .down {
+              bottom: 20px; }
+          .second .xiangyingshi .head .head1 a {
+            display: block;
+            height: 48px;
+            transition: opacity .5s ease,transform 0.5s linear; }
+            .second .xiangyingshi .head .head1 a:hover {
+              opacity: 0.5; }
+          .second .xiangyingshi .head .head1 .logos {
+            width: 21px;
+            background-image: url("img/logo_small.svg"); }
+          .second .xiangyingshi .head .head1 .bags {
+            width: 19px;
+            background-image: url("img/bag_small.svg"); }
+      .second .xiangyingshi .body {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        z-index: 99999999999999;
+        padding-left: 48px;
+        padding-right: 80px;
+        padding-top: 12px; }
+        .second .xiangyingshi .body li {
+          border-bottom: 1px solid #333;
+          height: 47px; }
+          .second .xiangyingshi .body li a {
+            display: block;
+            height: 47px;
+            transition: opacity .5s ease,transform 0.5s linear; }
+            .second .xiangyingshi .body li a:hover {
+              opacity: 0.5; }
+          .second .xiangyingshi .body li .bmac {
+            width: 36px;
+            background-image: url("img/mac_small.svg"); }
+          .second .xiangyingshi .body li .bipad {
+            width: 35px;
+            background-image: url("img/ipad_small.svg"); }
+          .second .xiangyingshi .body li .biphone {
+            width: 58px;
+            background-image: url("img/iphone_small.svg"); }
+          .second .xiangyingshi .body li .bwatch {
+            width: 52px;
+            background-image: url("img/watch_small.svg"); }
+          .second .xiangyingshi .body li .bmusic {
+            width: 48px;
+            background-image: url("img/music_small.svg"); }
+          .second .xiangyingshi .body li .bsupport {
+            width: 213px;
+            background-repeat: no-repeat;
+            background-image: url("img/support_small.svg"); }
+          .second .xiangyingshi .body li .inner {
+            width: 100%;
+            height: 100%; }
+            .second .xiangyingshi .body li .inner .bsearch {
+              float: left;
+              width: 22px;
+              background-image: url("img/search_small.svg"); }
+            .second .xiangyingshi .body li .inner .phone-search-box {
+              float: left;
+              height: 47px;
+              color: #fff;
+              margin-left: 6px;
+              cursor: text;
+              display: block;
+              line-height: 47px; }
+    .second .second-inner {
+      padding: 0 15px;
+      box-sizing: border-box;
+      position: relative;
+      display: block;
+      max-width: 1024px;
+      margin: 0 auto; }
+      .second .second-inner .se1 {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 1024px;
+        max-height: 44px;
+        padding: 0 22px;
+        text-align: justify;
+        position: relative;
+        box-sizing: border-box; }
+        .second .second-inner .se1 li {
+          display: inline-block;
+          height: 44px;
+          line-height: 44px;
+          opacity: 1;
+          transition: all 0.5s ease;
+          transform: scale(1, 1); }
+          .second .second-inner .se1 li.hidden.searching {
+            transform: scale(0, 0); }
+          .second .second-inner .se1 li a {
+            display: block;
+            height: 44px;
+            padding: 0 30px;
+            color: #f2f2f2; }
+        .second .second-inner .se1 li.app a {
+          width: 20px;
+          background: url("img/app.svg") no-repeat center center; }
+        .second .second-inner .se1 li.mac a {
+          width: 31px;
+          background: url("img/mac.svg") no-repeat center center; }
+        .second .second-inner .se1 li.ipad a {
+          width: 30px;
+          background: url("img/ipad.svg") no-repeat center center; }
+        .second .second-inner .se1 li.iphone a {
+          width: 48px;
+          background: url("img/iphone.svg") no-repeat center center; }
+        .second .second-inner .se1 li.watch a {
+          width: 44px;
+          background: url("img/watch.svg") no-repeat center center; }
+        .second .second-inner .se1 li.music a {
+          width: 60px;
+          background: url("img/music.svg") no-repeat center center; }
+        .second .second-inner .se1 li.zhichi a {
+          width: 57px;
+          background: url("img/zhichi.svg") no-repeat center center; }
+        .second .second-inner .se1 li.fangdajing a {
+          width: 20px;
+          background: url("img/fangdajing.svg") no-repeat center center; }
+        .second .second-inner .se1 li.key a {
+          width: 18px;
+          background: url("img/key.svg") no-repeat center center; }
+        .second .second-inner .se1::after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 0;
+          line-height: 0;
+          overflow: hidden; }
+      .second .second-inner .search-box {
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        width: 686px;
+        height: 234px;
+        background: white;
+        box-sizing: border-box;
+        transform: scale(0, 0); }
+        .second .second-inner .search-box .search-inner {
+          width: 835px;
+          height: 44px;
+          background: url("img/search_large.svg") no-repeat #343434;
+          transform: translate3d(1500px, 0, 0); }
+          .second .second-inner .search-box .search-inner.searching {
+            transform: translate3d(0, 0, 0); }
+          .second .second-inner .search-box .search-inner input {
+            width: 400px;
+            height: 30px;
+            background: #343434;
+            border: none;
+            font-size: 15px;
+            color: #999999;
+            transition: transform 0.5s ease;
+            transform: translate3d(1500px, 7px, 0); }
+            .second .second-inner .search-box .search-inner input.searching {
+              transform: translate3d(30px, 7px, 0); }
+          .second .second-inner .search-box .search-inner .close {
+            position: absolute;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer; }
+        .second .second-inner .search-box .search-example {
+          position: absolute;
+          top: 44px;
+          left: 0;
+          width: 100%;
+          height: 170px;
+          opacity: 0;
+          border-left: 1px solid #c2c2c2;
+          border-right: 1px solid #c2c2c2;
+          border-bottom: 1px solid #c2c2c2;
+          padding-bottom: 20px; }
+          .second .second-inner .search-box .search-example.searching {
+            opacity: 1; }
+          .second .second-inner .search-box .search-example span {
+            padding-left: 49px;
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            font-size: 11px;
+            color: #dbdbdb;
+            transition: transform 0.3s ease 0.3s;
+            transform: translate3d(1500px, 7px, 0); }
+            .second .second-inner .search-box .search-example span.searching {
+              transform: translate3d(0, 7px, 0); }
+          .second .second-inner .search-box .search-example ul {
+            height: 140px;
+            width: 670px;
+            padding: 0 8px; }
+            .second .second-inner .search-box .search-example ul li {
+              margin-bottom: 5px;
+              height: 30px;
+              width: 620px;
+              color: #cacaca;
+              padding-left: 49px;
+              line-height: 30px;
+              transition: transform 0.3s ease 0.3s;
+              transform: translate3d(1500px, 7px, 0); }
+              .second .second-inner .search-box .search-example ul li.searching {
+                transform: translate3d(0, 7px, 0); }
+              .second .second-inner .search-box .search-example ul li a {
+                color: #cacaca; }
+              .second .second-inner .search-box .search-example ul li:hover {
+                background: #f2f2f2; }
+                .second .second-inner .search-box .search-example ul li:hover a {
+                  color: #0070c9; }
+        .second .second-inner .search-box.searching {
+          transform: scale(1, 1); } }
+  @media screen and (max-width: 824px) {
+    .second .xiangyingshi {
+      position: relative;
+      display: block;
+      height: 48px; }
+      .second .xiangyingshi .head {
+        height: 48px;
+        max-width: 768px;
+        margin: 0 auto;
+        text-align: justify;
+        position: relative; }
+        .second .xiangyingshi .head::after {
+          content: "";
+          width: 100%;
+          display: inline-block;
+          height: 0;
+          font-size: 0;
+          line-height: 0; }
+        .second .xiangyingshi .head .head1 {
+          width: 48px;
+          display: inline-block;
+          position: relative; }
+          .second .xiangyingshi .head .head1 .big {
+            width: 100%;
+            height: 48px;
+            display: block;
+            cursor: pointer;
+            transition: opacity .5s ease;
+            opacity: 1; }
+            .second .xiangyingshi .head .head1 .big:hover {
+              opacity: 0.5; }
+            .second .xiangyingshi .head .head1 .big span {
+              width: 17px;
+              height: 1px;
+              display: block;
+              background: #fff;
+              position: absolute;
+              left: 16px; }
+            .second .xiangyingshi .head .head1 .big .up {
+              transform: translate3d(0, -1px, 0) rotate3d(0, 0, 0, 0deg);
+              transition: transform 1s ease; }
+              .second .xiangyingshi .head .head1 .big .up.searching {
+                transform-origin: center;
+                transform: translate3d(0, 3px, 0) rotate3d(0, 0, 1, 45deg); }
+            .second .xiangyingshi .head .head1 .big .down {
+              transform: translate3d(0, 1px, 0) rotate3d(0, 0, 0, 0deg);
+              transition: transform 1s ease; }
+              .second .xiangyingshi .head .head1 .big .down.searching {
+                transform-origin: center;
+                transform: translate3d(0, -3px, 0) rotate3d(0, 0, 1, -45deg); }
+          .second .xiangyingshi .head .head1 a {
+            display: block;
+            height: 48px;
+            transition: opacity .5s ease,transform 0.5s linear; }
+            .second .xiangyingshi .head .head1 a:hover {
+              opacity: 0.5; }
+          .second .xiangyingshi .head .head1 .logos {
+            width: 21px;
+            background-image: url("img/logo_small.svg"); }
+          .second .xiangyingshi .head .head1 .bags {
+            width: 19px;
+            background-image: url("img/bag_small.svg"); }
+      .second .xiangyingshi .body {
+        display: none;
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        z-index: 99999999999999;
+        padding-left: 48px;
+        padding-right: 80px; }
+        .second .xiangyingshi .body li {
+          border-bottom: 1px solid #333;
+          height: 47px; }
+          .second .xiangyingshi .body li a {
+            display: block;
+            height: 47px;
+            transition: opacity .5s ease,transform 0.5s linear; }
+            .second .xiangyingshi .body li a:hover {
+              opacity: 0.5; }
+          .second .xiangyingshi .body li .bmac {
+            width: 36px;
+            background-image: url("img/mac_small.svg"); }
+          .second .xiangyingshi .body li .bipad {
+            width: 35px;
+            background-image: url("img/ipad_small.svg"); }
+          .second .xiangyingshi .body li .biphone {
+            width: 58px;
+            background-image: url("img/iphone_small.svg"); }
+          .second .xiangyingshi .body li .bwatch {
+            width: 52px;
+            background-image: url("img/watch_small.svg"); }
+          .second .xiangyingshi .body li .bmusic {
+            width: 48px;
+            background-image: url("img/music_small.svg"); }
+          .second .xiangyingshi .body li .bsupport {
+            width: 213px;
+            background-repeat: no-repeat;
+            background-image: url("img/support_small.svg"); }
+          .second .xiangyingshi .body li .inner {
+            width: 100%;
+            height: 100%; }
+            .second .xiangyingshi .body li .inner .bsearch {
+              float: left;
+              width: 22px;
+              background-image: url("img/search_small.svg"); }
+            .second .xiangyingshi .body li .inner .phone-search-box {
+              float: left;
+              height: 47px;
+              color: #fff;
+              margin-left: 6px;
+              cursor: text;
+              display: block;
+              line-height: 47px; }
+    .second .second-inner {
+      padding: 0 15px;
+      box-sizing: border-box;
+      position: relative;
+      display: none;
+      max-width: 1024px;
+      margin: 0 auto; }
+      .second .second-inner .se1 {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-width: 1024px;
+        max-height: 44px;
+        padding: 0 22px;
+        text-align: justify;
+        position: relative;
+        box-sizing: border-box; }
+        .second .second-inner .se1 li {
+          display: inline-block;
+          height: 44px;
+          line-height: 44px;
+          opacity: 1;
+          transition: all 0.5s ease;
+          transform: scale(1, 1); }
+          .second .second-inner .se1 li.hidden.searching {
+            transform: scale(0, 0); }
+          .second .second-inner .se1 li a {
+            display: block;
+            height: 44px;
+            padding: 0 30px;
+            color: #f2f2f2; }
+        .second .second-inner .se1 li.app a {
+          width: 20px;
+          background: url("img/app.svg") no-repeat center center; }
+        .second .second-inner .se1 li.mac a {
+          width: 31px;
+          background: url("img/mac.svg") no-repeat center center; }
+        .second .second-inner .se1 li.ipad a {
+          width: 30px;
+          background: url("img/ipad.svg") no-repeat center center; }
+        .second .second-inner .se1 li.iphone a {
+          width: 48px;
+          background: url("img/iphone.svg") no-repeat center center; }
+        .second .second-inner .se1 li.watch a {
+          width: 44px;
+          background: url("img/watch.svg") no-repeat center center; }
+        .second .second-inner .se1 li.music a {
+          width: 60px;
+          background: url("img/music.svg") no-repeat center center; }
+        .second .second-inner .se1 li.zhichi a {
+          width: 57px;
+          background: url("img/zhichi.svg") no-repeat center center; }
+        .second .second-inner .se1 li.fangdajing a {
+          width: 20px;
+          background: url("img/fangdajing.svg") no-repeat center center; }
+        .second .second-inner .se1 li.key a {
+          width: 18px;
+          background: url("img/key.svg") no-repeat center center; }
+        .second .second-inner .se1::after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 0;
+          line-height: 0;
+          overflow: hidden; }
+      .second .second-inner .search-box {
+        z-index: 3;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        width: 686px;
+        height: 234px;
+        background: white;
+        box-sizing: border-box;
+        transform: scale(0, 0); }
+        .second .second-inner .search-box .search-inner {
+          width: 835px;
+          height: 44px;
+          background: url("img/search_large.svg") no-repeat #343434;
+          transform: translate3d(1500px, 0, 0); }
+          .second .second-inner .search-box .search-inner.searching {
+            transform: translate3d(0, 0, 0); }
+          .second .second-inner .search-box .search-inner input {
+            width: 400px;
+            height: 30px;
+            background: #343434;
+            border: none;
+            font-size: 15px;
+            color: #999999;
+            transition: transform 0.5s ease;
+            transform: translate3d(1500px, 7px, 0); }
+            .second .second-inner .search-box .search-inner input.searching {
+              transform: translate3d(30px, 7px, 0); }
+          .second .second-inner .search-box .search-inner .close {
+            position: absolute;
+            right: 0;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer; }
+        .second .second-inner .search-box .search-example {
+          position: absolute;
+          top: 44px;
+          left: 0;
+          width: 100%;
+          height: 170px;
+          opacity: 0;
+          border-left: 1px solid #c2c2c2;
+          border-right: 1px solid #c2c2c2;
+          border-bottom: 1px solid #c2c2c2;
+          padding-bottom: 20px; }
+          .second .second-inner .search-box .search-example.searching {
+            opacity: 1; }
+          .second .second-inner .search-box .search-example span {
+            padding-left: 49px;
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            font-size: 11px;
+            color: #dbdbdb;
+            transition: transform 0.3s ease 0.3s;
+            transform: translate3d(1500px, 7px, 0); }
+            .second .second-inner .search-box .search-example span.searching {
+              transform: translate3d(0, 7px, 0); }
+          .second .second-inner .search-box .search-example ul {
+            height: 140px;
+            width: 670px;
+            padding: 0 8px; }
+            .second .second-inner .search-box .search-example ul li {
+              margin-bottom: 5px;
+              height: 30px;
+              width: 620px;
+              color: #cacaca;
+              padding-left: 49px;
+              line-height: 30px;
+              transition: transform 0.3s ease 0.3s;
+              transform: translate3d(1500px, 7px, 0); }
+              .second .second-inner .search-box .search-example ul li.searching {
+                transform: translate3d(0, 7px, 0); }
+              .second .second-inner .search-box .search-example ul li a {
+                color: #cacaca; }
+              .second .second-inner .search-box .search-example ul li:hover {
+                background: #f2f2f2; }
+                .second .second-inner .search-box .search-example ul li:hover a {
+                  color: #0070c9; }
+        .second .second-inner .search-box.searching {
+          transform: scale(1, 1); } }
+
+.imgs-box {
+  width: 100%;
+  overflow: hidden; }
+  .imgs-box li {
+    height: 200px; }
+  .imgs-box .macos_sierra {
+    background: url("img/macos_sierra_large.jpg") no-repeat center center; }
+  .imgs-box .ios {
+    background: url("img/ios_large.jpg") no-repeat center center; }
+  .imgs-box .watchos {
+    background: url("img/watchos_large.jpg") no-repeat center center; }
+  .imgs-box .music {
+    background: url("img/music_large.jpg") no-repeat center center; }
+
+.col {
+  float: left; }
+
+.row {
+  overflow: hidden; }
+
+.l-1 {
+  width: 8.33333%; }
+
+.l-2 {
+  width: 16.66667%; }
+
+.l-3 {
+  width: 25%; }
+
+.l-4 {
+  width: 33.33333%; }
+
+.l-5 {
+  width: 41.66667%; }
+
+.l-6 {
+  width: 50%; }
+
+.l-7 {
+  width: 58.33333%; }
+
+.l-8 {
+  width: 66.66667%; }
+
+.l-9 {
+  width: 75%; }
+
+.l-10 {
+  width: 83.33333%; }
+
+.l-11 {
+  width: 91.66667%; }
+
+.l-12 {
+  width: 100%; }
+
+@media screen and (max-width: 968px) {
+  .m-1 {
+    width: 8.33333%; }
+  .m-2 {
+    width: 16.66667%; }
+  .m-3 {
+    width: 25%; }
+  .m-4 {
+    width: 33.33333%; }
+  .m-5 {
+    width: 41.66667%; }
+  .m-6 {
+    width: 50%; }
+  .m-7 {
+    width: 58.33333%; }
+  .m-8 {
+    width: 66.66667%; }
+  .m-9 {
+    width: 75%; }
+  .m-10 {
+    width: 83.33333%; }
+  .m-11 {
+    width: 91.66667%; }
+  .m-12 {
+    width: 100%; }
+  .imgs-box .macos_sierra {
+    background: url("img/macos_sierra_medium.jpg") no-repeat center center; }
+  .imgs-box .ios {
+    background: url("img/ios_medium.jpg") no-repeat center center; }
+  .imgs-box .watchos {
+    background: url("img/watchos_medium.jpg") no-repeat center center; }
+  .imgs-box .music {
+    background: url("img/music_medium.jpg") no-repeat center center; } }
+
+@media screen and (max-width: 824px) {
+  .s-1 {
+    width: 8.33333%; }
+  .s-2 {
+    width: 16.66667%; }
+  .s-3 {
+    width: 25%; }
+  .s-4 {
+    width: 33.33333%; }
+  .s-5 {
+    width: 41.66667%; }
+  .s-6 {
+    width: 50%; }
+  .s-7 {
+    width: 58.33333%; }
+  .s-8 {
+    width: 66.66667%; }
+  .s-9 {
+    width: 75%; }
+  .s-10 {
+    width: 83.33333%; }
+  .s-11 {
+    width: 91.66667%; }
+  .s-12 {
+    width: 100%; }
+  .imgs-box .macos_sierra {
+    background: url("img/macos_sierra_small.jpg") no-repeat center center; }
+  .imgs-box .ios {
+    background: url("img/ios_small.jpg") no-repeat center center; }
+  .imgs-box .watchos {
+    background: url("img/watchos_small.jpg") no-repeat center center; }
+  .imgs-box .music {
+    background: url("img/music_small.jpg") no-repeat center center; } }
+
+.carousel {
+  width: 100%;
+  max-height: 600px;
+  min-height: 300px;
+  height: calc(100vh - 76px);
+  background-size: contain; }
+  .carousel .tu {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden; }
+    .carousel .tu a {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      transform: translate3d(0, 0, 0); }
+    .carousel .tu .active {
+      z-index: 2;
+      transition: transform .5s ease;
+      transform: translate3d(0, 0, 0); }
+    .carousel .tu .right {
+      transform: translate3d(100%, 0, 0); }
+    .carousel .tu .left {
+      transform: translate3d(-100%, 0, 0); }
+    .carousel .tu .enter {
+      z-index: 1;
+      transition: transform .5s ease;
+      transform: translate3d(300px, 0, 0); }
+    .carousel .tu .leave {
+      z-index: 1;
+      transition: transform .5s ease;
+      transform: translate3d(-300px, 0, 0); }
+    .carousel .tu .iphone {
+      background-color: #000;
+      background-image: url(img/iphone_large.jpg); }
+    .carousel .tu .watch {
+      background-color: #f2f2f2;
+      background-image: url(img/watch_large.jpg); }
+    .carousel .tu .airpods {
+      background-color: #ffffff;
+      background-image: url(img/airpods_large.jpg); }
+    .carousel .tu .event {
+      background-color: #000;
+      background-image: url(img/event_large.jpg); }
+  .carousel .list {
+    z-index: 3;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 80px; }
+    .carousel .list .dot-nav {
+      width: 280px;
+      height: 22px;
+      text-align: justify;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 10px 0; }
+      .carousel .list .dot-nav::after {
+        display: inline-block;
+        content: "";
+        width: 100%;
+        height: 0; }
+      .carousel .list .dot-nav .dot {
+        width: 50px;
+        height: 2px;
+        display: inline-block;
+        float: left;
+        margin: 0 5px;
+        padding: 10px 0;
+        background: red;
+        cursor: pointer;
+        background: #cacaca;
+        background-clip: content-box; }
+      .carousel .list .dot-nav .dot.active {
+        background-color: #777; }
+
+.third {
+  width: 100%;
+  background: #f2f2f2; }
+  @media screen and (max-width: 1370px) {
+    .third .fourth {
+      display: block;
+      max-width: 980px;
+      margin: 0 auto;
+      height: 230px;
+      padding-top: 20px;
+      font-size: 14px;
+      clear: both; }
+      .third .fourth .nav-inner {
+        width: 20%;
+        float: left; }
+        .third .fourth .nav-inner h3 {
+          height: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          padding: 0;
+          margin: 0;
+          color: #666; }
+        .third .fourth .nav-inner h3.ding {
+          margin-top: 20px; }
+        .third .fourth .nav-inner a {
+          display: block;
+          font-size: 12px;
+          line-height: 20px;
+          color: #666; }
+          .third .fourth .nav-inner a:hover {
+            color: #333;
+            text-decoration: underline; }
+    .third .fifth {
+      display: none;
+      max-width: 980px;
+      padding-top: 20px;
+      font-size: 14px;
+      clear: both; }
+      .third .fifth .nav-inner {
+        width: 20%; }
+        .third .fifth .nav-inner h3 {
+          height: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          padding: 0;
+          margin: 0;
+          color: #666; }
+        .third .fifth .nav-inner ul {
+          display: none; }
+        .third .fifth .nav-inner a {
+          display: block;
+          font-size: 12px;
+          line-height: 20px;
+          color: #666; }
+          .third .fifth .nav-inner a:hover {
+            color: #333;
+            text-decoration: underline; } }
+  @media screen and (max-width: 750px) {
+    .third .fourth {
+      display: none;
+      max-width: 980px;
+      margin: 0 auto;
+      height: 230px;
+      padding-top: 20px;
+      font-size: 14px;
+      clear: both; }
+      .third .fourth .nav-inner {
+        width: 20%;
+        float: left; }
+        .third .fourth .nav-inner h3 {
+          height: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          padding: 0;
+          margin: 0;
+          color: #666; }
+        .third .fourth .nav-inner h3.ding {
+          margin-top: 20px; }
+        .third .fourth .nav-inner a {
+          display: block;
+          font-size: 12px;
+          line-height: 20px;
+          color: #666; }
+          .third .fourth .nav-inner a:hover {
+            color: #333;
+            text-decoration: underline; }
+    .third .fifth {
+      display: block;
+      max-width: 980px;
+      padding-top: 20px;
+      font-size: 14px;
+      clear: both; }
+      .third .fifth .nav-inner {
+        width: 100%; }
+        .third .fifth .nav-inner .h3 {
+          width: 100%;
+          height: 30px;
+          border-bottom: 1px solid #e3e3e3;
+          line-height: 30px; }
+          .third .fifth .nav-inner .h3 h3 {
+            height: 30px;
+            font-size: 12px;
+            line-height: 30px;
+            padding-left: 10px;
+            margin: 0;
+            color: #666;
+            float: left;
+            cursor: pointer; }
+          .third .fifth .nav-inner .h3 h3.jia {
+            float: right;
+            height: 30px;
+            font-size: 12px;
+            line-height: 30px;
+            padding-right: 10px;
+            margin: 0;
+            color: #666;
+            cursor: pointer; }
+        .third .fifth .nav-inner ul {
+          display: none; }
+        .third .fifth .nav-inner a {
+          display: block;
+          font-size: 12px;
+          line-height: 20px;
+          color: #666; }
+          .third .fifth .nav-inner a:hover {
+            color: #333;
+            text-decoration: underline; } }
+  .third .footer {
+    max-width: 980px;
+    margin: 0 auto;
+    margin-top: 20px; }
+    .third .footer h3 {
+      height: 20px;
+      font-size: 12px;
+      line-height: 20px;
+      padding: 0;
+      margin: 0;
+      color: #aaa; }
+      .third .footer h3 a {
+        color: #666; }
+        .third .footer h3 a:hover {
+          color: #666;
+          text-decoration: underline; }
+      .third .footer h3 a.shang {
+        color: cornflowerblue; }
+      .third .footer h3 a.xia {
+        color: #aaa; }
